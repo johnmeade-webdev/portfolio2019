@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jM webDev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400|Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" /> -->
+
+</head>
+
+<body onresize="mainSpacing()">
+
+    <header>
+        <h1>jm webDev</h1>
+        <nav>
+            <ul>
+                <li>about</li>
+                <li>contact</li>
+                <li>projects</li>
+                <li>networks</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="landscape">
+        <div id="main-left">
+
+        </div>
+        <div id="main-right">
+            <p id='rightMainP'>
+                <i class="fab fa-facebook-f"></i>
+                <br>
+                <i class="fab fa-github"></i>
+                <br>
+                <i class="fab fa-stack-overflow"></i>
+                <br>
+                <i class="fab fa-twitter"></i>
+                <br>
+                <i class="fab fa-medium-m"></i>
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>projects</h2>
+        <div id="project-container">
+            <div class='project'>
+                <div class="project-image">
+                    <a href="https://johnmeade-webdev.github.io/bookFinder" target="_blank"><img src="./pics/bookFinder_400x260.png" width="300" alt="Book Finder Homepage Screenshot"></a>
+                </div>
+                <div class="project-description">
+                    <p>BookFinder is a simple web application that was completed as part of a Chingu cohort pre-work session. It draws on the google books api and is written in vanilla HTML, CSS, Javascript.
+                    <br><br>
+                    The unique feature in the app is a book shelf in which users can store titles for future reference. This app has no back end, so all storage takes place on the client-side. Data persists through use of the browser's localStorage feature.
+                    </p>
+                </div>
+            </div>
+            <div class='project'>
+                <div class="project-image">
+                        <a href="https://johnmeade-webdev.github.io/dgladenpottery" target="_blank"><img src="./pics/potteryWebsite_400x260.png"  width="300" alt="D Gladen Potter Landing Page Screenshot"></a>
+                </div>
+                <div class="project-description">
+                    <p>Current Project: This is the landing page for a current project that will be the home of DGladen Pottery. I am enjoying working on this project because of the color contrasts. The template is monochromatic, allowing for each image to grab the user's attention. The use of images in a responsive manner allow me to give each user an experience that uniquely shifts instead of degrades due to different screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    </section>
+
+    <footer>
+        <p>jm wedDev | 2019</p>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
