@@ -30,9 +30,14 @@ function navChange(){
 
 let modal = document.querySelector('#contact-modal');
 let contactLink = document.querySelector('#contact');
+let closeModal = document.querySelector('#close-modal');
 
 contactLink.onclick = function() {
     modal.style.display = "block";
+}
+
+closeModal.onclick = function() {
+    modal.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -40,6 +45,8 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
 
 // ------------------------------
 // scroll-based navigation

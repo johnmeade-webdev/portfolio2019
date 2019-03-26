@@ -22,13 +22,13 @@
 
   <body onresize="mainSpacing()">
     <div class="page-wrapper">
-      <header class="full">
-        <h1 id="home" role="button">jm webDev</h1>
+      <header class="full"> 
+        <h1 id="home" tabindex="1">jm webDev</h1>
         <nav role="navigation">
           <ul class="full">
-            <li id="about">about</li>
-            <li id="contact">contact</li>
-            <li id="projects">projects</li>
+            <li id="about" tabindex="2">about</li>
+            <li id="contact" tabindex="3">contact</li>
+            <li id="projects" tabindex="4">projects</li>
           </ul>
         </nav>
       </header>
@@ -266,6 +266,7 @@
       </section>
 
       <aside id="contact-modal" role="form">
+        
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSe9u-zHdUFLtax3-XabdrvOlMHLeec9afMGsAFBsfjOaFdnVw/viewform?embedded=true"
           width="500"
@@ -275,6 +276,7 @@
           marginwidth="0"
           >Loading...</iframe
         >
+        <span id='close-modal'>close</span>
       </aside>
 
       <footer role="contentinfo">
