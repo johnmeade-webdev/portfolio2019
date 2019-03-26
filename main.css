@@ -209,6 +209,10 @@ section {
   text-align: justify;
 }
 
+.project-image picture, .project-image img {
+  width: 300px;
+}
+
 .project-image,
 .project-description {
   width: 300px;
@@ -239,7 +243,7 @@ section {
   justify-content: center;
 }
 
-#about-text img {
+#about-text img, #about-text picture {
   width: 300px;
   box-shadow: 5px 5px 10px rgb(139, 139, 139);
 }
@@ -300,7 +304,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  #about-text img {
+  #about-text img, #about-text picture {
     width: 150px;
   }
 
@@ -331,7 +335,7 @@ footer {
     height: auto;
   }
 
-  #about-text img {
+  #about-text img, #about-text picture {
     width: 150px;
   }
 
