@@ -195,7 +195,8 @@ section {
 #project-container {
   margin: 0 auto;
   width: 90%;
-  overflow-x: scroll;
+  overflow: scroll;
+  overflow-Y: hidden;
 }
 
 .project,
