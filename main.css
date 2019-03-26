@@ -18,8 +18,10 @@ h6 {
   margin: 0;
 }
 
-a, a:visited, a:active {
-    color: inherit;
+a,
+a:visited,
+a:active {
+  color: inherit;
 }
 
 body {
@@ -170,6 +172,7 @@ section {
 /* ============== */
 
 #projects-section {
+  position: relative;
   background-color: rgba(1, 44, 109, 0.15);
   height: 25rem;
   box-shadow: 5px 5px 10px rgb(139, 139, 139);
@@ -180,10 +183,19 @@ section {
   font-size: 3rem;
 }
 
+#projects-section i {
+    position: absolute;
+    bottom: 47%;
+    left: 97%;
+    font-size: 2rem;
+    color: rgb(196, 141, 41);
+    color: rgba(196, 142, 41, 0.705);
+}
+
 #project-container {
   margin: 0 auto;
   width: 90%;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 .project,
@@ -212,22 +224,30 @@ section {
 /* ============ */
 
 #about-text {
-    color: black;
-    height: 25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 27rem;
+}
+
+#about-text h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#about-text div {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #about-text img {
-    width: 300px;
-    box-shadow: 5px 5px 10px rgb(139, 139, 139);
+  width: 300px;
+  box-shadow: 5px 5px 10px rgb(139, 139, 139);
 }
 
 #about-text p {
-    margin-right: 2rem;
-    width: 60%;
-    text-align: justify;
+  margin-right: 2rem;
+  width: 60%;
+  text-align: justify;
 }
 
 /* ========== */
@@ -250,13 +270,12 @@ section {
 }
 
 iframe {
-    position: fixed;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 /* ============== */
 /* Footer Styles */
@@ -270,11 +289,10 @@ footer {
   line-height: 2rem;
 }
 
-
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 600px){
-    #about-text img {
-        width: 150px;
-    }
+@media only screen and (max-width: 600px) {
+  #about-text img {
+    width: 150px;
+  }
 }
