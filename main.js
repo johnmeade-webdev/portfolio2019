@@ -47,3 +47,11 @@ document.querySelector('#about').onclick = function() {
     }
     window.scrollTo(scrollOptions)
 }
+
+document.querySelector("#chevron").onclick = function() {
+    document.querySelector("#project-container").scrollBy ({
+        top: 0,
+        left: 350,
+        behavior: 'smooth'
+    });
+}
