@@ -1,9 +1,17 @@
+// ------------------------------
+// vertical ventering that preserves shape-outside
+// ------------------------------
+
 mainSpacing();
 function mainSpacing(){
     let mainHeight = document.querySelector('#landscape').offsetHeight;
     let rightMainPar = document.querySelector('#rightMainP').offsetHeight;
     document.querySelector('#main-right').style.padding = `${(mainHeight - rightMainPar)/2}px 0 0 0`;
 }
+
+// ------------------------------
+// changes height of the nav div based on scroll location
+// ------------------------------
 
 window.onscroll = function() {navChange()};
 function navChange(){
@@ -15,6 +23,10 @@ function navChange(){
         document.querySelector('ul').classList = 'full';
     }
 }
+
+// ------------------------------
+// shows/hides the contact modal
+// ------------------------------
 
 let modal = document.querySelector('#contact-modal');
 let contactLink = document.querySelector('#contact');
@@ -29,6 +41,10 @@ window.onclick = function(event) {
     }
 }
 
+// ------------------------------
+// scroll-based navigation
+// ------------------------------
+
 document.querySelector('#projects').onclick = function() {
     let scrollOptions = {
         left: 0,
@@ -41,11 +57,15 @@ document.querySelector('#projects').onclick = function() {
 document.querySelector('#about').onclick = function() {
     let scrollOptions = {
         left: 0,
-        top: 787,
+        top: 800,
         behavior: 'smooth'
     }
     window.scrollTo(scrollOptions)
 }
+
+// ------------------------------
+// chevron scrolling for horizontal overflow of project display
+// ------------------------------
 
 document.querySelector("#chevron").onclick = function() {
     document.querySelector("#project-container").scrollBy ({

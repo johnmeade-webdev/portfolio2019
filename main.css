@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+.page-wrapper {
+    min-width: 300px;
+}
+
 h1,
 h2,
 h3,
@@ -24,12 +34,6 @@ a:active {
   color: inherit;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
-}
-
 ul,
 li {
   list-style: none;
@@ -46,16 +50,15 @@ em {
   font-weight: 300;
 }
 
-/* ============= */
+/* ============================= */
 /* Header Styles */
-/* ============= */
+/* ============================= */
 
 header {
   transition: height 500ms ease-in-out;
 }
 
 header.full {
-  /* border: 2px solid black; */
   position: fixed;
   top: 0;
   right: 0;
@@ -93,9 +96,9 @@ header h1 {
   font-size: 4rem;
 }
 
-/* ========== */
+/* ============================= */
 /* Nav Styles */
-/* ========== */
+/* ============================= */
 
 ul.collapsed {
   display: flex;
@@ -114,11 +117,6 @@ li {
   text-decoration-color: rgba(1, 44, 109, 0);
   transition: text-decoration-color, 400ms;
   -webkit-transition: text-decoration-color, 400ms;
-
-  /* -webkit-transition-duration: 400ms;
-  transition-duration: 400ms;
-  -webkit-transition-property: text-decoration-color;
-  transition-property: text-decoration-color; */
 }
 
 li:hover {
@@ -126,9 +124,9 @@ li:hover {
   cursor: pointer;
 }
 
-/* =========== */
-/* Main Styles */
-/* =========== */
+/* ============================= */
+/* Main Section Styles */
+/* ============================= */
 
 section {
   height: 20rem;
@@ -167,9 +165,9 @@ section {
   font-size: 3rem;
 }
 
-/* ============== */
-/* Project Styles */
-/* ============== */
+/* ============================= */
+/* Project Section Styles */
+/* ============================= */
 
 #projects-section {
   position: relative;
@@ -184,19 +182,19 @@ section {
 }
 
 #projects-section i {
-    position: absolute;
-    bottom: 47%;
-    left: 97%;
-    font-size: 2rem;
-    color: rgb(196, 141, 41);
-    color: rgba(196, 142, 41, 0.705);
+  position: absolute;
+  bottom: 47%;
+  left: 97%;
+  font-size: 2rem;
+  color: rgb(196, 141, 41);
+  color: rgba(196, 142, 41, 0.705);
 }
 
 #project-container {
   margin: 0 auto;
   width: 90%;
   overflow: scroll;
-  overflow-Y: hidden;
+  overflow-y: hidden;
 }
 
 .project,
@@ -220,9 +218,9 @@ section {
   margin-right: 3rem;
 }
 
-/* ============ */
-/* About Styles */
-/* ============ */
+/* ============================= */
+/* About Section Styles */
+/* ============================= */
 
 #about-text {
   height: 27rem;
@@ -251,9 +249,9 @@ section {
   text-align: justify;
 }
 
-/* ========== */
+/* ============================= */
 /* Contact Modal Styles */
-/* ========== */
+/* ============================= */
 
 #contact-modal {
   display: none;
@@ -278,22 +276,89 @@ iframe {
   transform: translate(-50%, -50%);
 }
 
-/* ============== */
+/* ============================= */
 /* Footer Styles */
-/* ============== */
+/* ============================= */
 
 footer {
   background-color: rgba(1, 44, 109, 0.2);
   font-size: 0.85rem;
   text-align: center;
   height: 2rem;
+  margin-top: 2rem;
   line-height: 2rem;
 }
 
+/* ============================= */
 /* MEDIA QUERIES */
+/* ============================= */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 610px) {
+  #projects-section i {
+    left: 95%;
+    font-size: 1.5rem;
+  }
+
   #about-text img {
     width: 150px;
   }
+
+  iframe {
+      width: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header.full h1 {
+    font-size: 2.75rem;
+  }
+
+  header.collapsed h1 {
+    font-size: 2rem;
+  }
+
+  ul.collapsed li {
+    margin-right: 0.25rem;
+  }
+
+  #main-right p {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  #about-text {
+    height: auto;
+  }
+
+  #about-text img {
+    width: 150px;
+  }
+
+  #about-text div {
+    flex-direction: column-reverse;
+  }
+
+  #about-text p {
+    margin-right: 0;
+    width: 80%;
+    text-align: justify;
+  }
+
+  iframe {
+    width: 300px;
+}
+}
+
+@media only screen and (max-width: 330px) {
+  header.collapsed h1 {
+    font-size: 1rem;
+  }
+
+  ul.collapsed li {
+    font-size: 1rem;
+  }
+
+  iframe {
+    width: 250px;
+}
 }
