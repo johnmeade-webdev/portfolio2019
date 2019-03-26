@@ -7,7 +7,6 @@ function mainSpacing(){
 
 window.onscroll = function() {navChange()};
 function navChange(){
-    console.log(window.scrollY)
     if(window.scrollY > 100){
         document.querySelector('header').classList = 'collapsed';
         document.querySelector('ul').classList = 'collapsed';
