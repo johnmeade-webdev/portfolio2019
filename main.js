@@ -45,6 +45,15 @@ window.onclick = function(event) {
 // scroll-based navigation
 // ------------------------------
 
+document.querySelector('#home').onclick = function() {
+    let scrollOptions = {
+        left: 0,
+        top: 0,
+        behavior: 'smooth'
+    }
+    window.scrollTo(scrollOptions)
+}
+
 document.querySelector('#projects').onclick = function() {
     let scrollOptions = {
         left: 0,
