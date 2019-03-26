@@ -3,34 +3,45 @@
 /* ============= */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:visited, a:active {
+    color: inherit;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
-
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
-ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    display: block;
+  display: block;
 }
 
 em {
-    font-style: normal;
-    font-weight: 300;
+  font-style: normal;
+  font-weight: 300;
 }
 
 /* ============= */
@@ -38,46 +49,79 @@ em {
 /* ============= */
 
 header {
-    /* border: 2px solid black; */
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 12.5rem;
-    background-color: rgba(1, 44, 109, 0.521);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    z-index: 1;
+  transition: height 500ms ease-in-out;
+}
+
+header.full {
+  /* border: 2px solid black; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 12.5rem;
+  background-color: rgba(1, 44, 109, 0.521);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+header.collapsed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5rem;
+  background-color: rgb(122, 161, 219);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+header.collapsed h1 {
+  font-size: 3rem;
 }
 
 header h1 {
-    margin: 0 1.5rem;
-    padding: 0;
-    font-size: 4rem;
-
+  margin: 0 1.5rem;
+  padding: 0;
+  font-size: 4rem;
 }
 
 /* ========== */
 /* Nav Styles */
 /* ========== */
 
+ul.collapsed {
+  display: flex;
+}
+
+ul.collapsed li {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
 li {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-decoration: underline;
-    text-decoration-color: rgba(1, 44, 109, 0);
-    -webkit-transition-duration: 400ms;
-    transition-duration: 400ms;
-    -webkit-transition-property: text-decoration-color;
-    transition-property: text-decoration-color;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-color: rgba(1, 44, 109, 0);
+  transition: text-decoration-color, 400ms;
+  -webkit-transition: text-decoration-color, 400ms;
+
+  /* -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transition-property: text-decoration-color;
+  transition-property: text-decoration-color; */
 }
 
 li:hover {
-    text-decoration-color: white;
-    cursor: pointer;
+  text-decoration-color: white;
+  cursor: pointer;
 }
 
 /* =========== */
@@ -85,95 +129,152 @@ li:hover {
 /* =========== */
 
 section {
-    height: 20rem;
-    width: 95vw;
-    margin: 2rem auto 2rem auto;
+  height: 20rem;
+  width: 95vw;
+  margin: 4rem auto 4rem auto;
 }
 
 #landscape {
-    margin-top: 14.5rem;
+  margin-top: 14.5rem;
 }
 
 #main-left {
-    background-image: url('https://drive.google.com/uc?id=1NeUyxUgp7I56mTpmzYIUXbQilRnd0dAK');
-    background-size: cover;
-    background-position: center;
-    width: 75%;
-    height: 100%;
-    -webkit-clip-path: polygon(0 0, 95% 0, 50% 100%, 0% 100%);
-    clip-path: polygon(0 0, 95% 0, 50% 100%, 0% 100%);
-    shape-outside: polygon(0 0, 97% 0, 50% 100%, 0% 100%);
-    shape-margin: .5rem;
-    float: left;
+  background-image: url("https://drive.google.com/uc?id=1NeUyxUgp7I56mTpmzYIUXbQilRnd0dAK");
+  background-size: cover;
+  background-position: center;
+  width: 75%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 95% 0, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 95% 0, 50% 100%, 0% 100%);
+  shape-outside: polygon(0 0, 97% 0, 50% 100%, 0% 100%);
+  shape-margin: 0.5rem;
+  float: left;
 }
 
 #main-right {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #main-right p {
-    margin: 0 0;
-    padding: 1.5rem .5rem 1.5rem 0;
-    color: rgba(235, 60, 6, 0.596);
-    text-align: justify;
-    font-weight: 400;
-    font-size: 3rem;
+  margin: 0 0;
+  padding: 1.5rem 0.5rem 1.5rem 0;
+  color: rgba(235, 60, 6, 0.596);
+  text-align: justify;
+  font-weight: 400;
+  font-size: 3rem;
 }
 
 /* ============== */
 /* Project Styles */
 /* ============== */
 
-#projects {
-    background-color: rgba(1, 44, 109, 0.15);
-    height: 25rem;
+#projects-section {
+  background-color: rgba(1, 44, 109, 0.15);
+  height: 25rem;
+  box-shadow: 5px 5px 10px rgb(139, 139, 139);
 }
 
-#projects h2 {
-    text-align: center;
-    font-size: 3rem;
+#projects-section h2 {
+  text-align: center;
+  font-size: 3rem;
 }
 
 #project-container {
-    margin: auto;
-    width: 90%;
-    overflow: scroll;
+  margin: 0 auto;
+  width: 90%;
+  overflow: scroll;
 }
 
-.project, #project-container {
-    display: flex;
-    align-items: center;
+.project,
+#project-container {
+  display: flex;
+  align-items: center;
 }
 
 .project-description {
-    justify-self: center;
-    text-align: justify;
+  justify-self: center;
+  text-align: justify;
 }
 
-.project-image, .project-description {
-    width: 300px;
-    margin: 0 1.25rem 0 0;
+.project-image,
+.project-description {
+  width: 300px;
+  margin: 0 1.25rem 0 0;
 }
 
 .project {
-    margin-right: 3rem;
+  margin-right: 3rem;
 }
+
+/* ============ */
+/* About Styles */
+/* ============ */
+
+#about-text {
+    color: black;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-text img {
+    width: 300px;
+    box-shadow: 5px 5px 10px rgb(139, 139, 139);
+}
+
+#about-text p {
+    margin-right: 2rem;
+    width: 60%;
+    text-align: justify;
+}
+
+/* ========== */
+/* Contact Modal Styles */
+/* ========== */
+
+#contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  text-align: center;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  background-color: rgb(100, 133, 160);
+  background-color: rgba(100, 133, 160, 0.877);
+}
+
+iframe {
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /* ============== */
 /* Footer Styles */
 /* ============== */
 
-
 footer {
-    background-color: rgba(1, 44, 109, 0.2);
-    font-size: .85rem;
-    text-align: center;
-    height: 2rem;
-    line-height: 2rem;
+  background-color: rgba(1, 44, 109, 0.2);
+  font-size: 0.85rem;
+  text-align: center;
+  height: 2rem;
+  line-height: 2rem;
 }
 
 
+/* MEDIA QUERIES */
 
-
-
+@media only screen and (max-width: 600px){
+    #about-text img {
+        width: 150px;
+    }
+}
