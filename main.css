@@ -10,6 +10,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+  font-display: auto;
 }
 
 .page-wrapper {
